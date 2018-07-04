@@ -1,0 +1,65 @@
+body { /* SELECTOR */
+  background: papayawhip; /* REGLAS */
+  color: tomato; /* REGLAS */
+}
+
+.container.big {
+  font-size: 20px;
+  height: 200px;
+  line-height: 200px;
+  width: 200px;
+}
+
+.container {
+  background: greenyellow;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  transition: 0.5s;
+  width: 100px;
+}
+
+.container.big {
+  font-size: 200px;
+}
+
+h1.big {
+  color: gray;
+}
+
+.container:hover {
+  transform: rotate(45deg) scale(0.8);
+}
+
+.container.big .test {
+  color: blueviolet;
+  font-size: 100px;
+  transition: 0.5s;
+}
+
+.container:hover .test {
+  transform: rotate(-90deg);
+}
+
+.plano-cartesiano {
+  border: 2px dashed gray;
+  height: 300px;
+  position: relative; /* importante */
+  width: 300px;
+}
+
+.particula {
+  background: orange;
+  border-radius: 50px;
+  height: 50px;
+  left: 10px;
+  position: absolute; /* importante */
+  top: 30px;
+  transition: 0.25s;
+  width: 50px;
+}
+
+.plano-cartesiano:hover .particula {
+  left: 80px;
+  top: 70px;
+}
