@@ -1,0 +1,189 @@
+/*
+
+display !flex
+width
+height
+border
+padding
+margin
+box-sizing
+media queries
+float
+display flex
+
+*/
+
+.mi-div {
+  background: red;
+  height: 100px;
+  width: 20%;
+}
+
+.titulo {
+  background: purple;
+  height: 200px;
+  width: 50%;
+}
+
+/* ul {
+  background: papayawhip;
+}
+
+li:nth-child(even) {
+  background: orangered;
+  height: 300px;
+  margin-bottom: 100px;
+} */
+
+
+.amigable {
+  background: blueviolet;
+  height: 100px;
+}
+
+.ermitanio {
+  background: greenyellow;
+  height: 50px;
+  margin: 100px;
+  padding: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ermitanio ul li {
+  background: red;
+  transition: 0.5s;
+}
+
+.ermitanio ul li:hover {
+  background: tomato;
+}
+
+.compinches {}
+
+.compinche {
+  background: orange;
+  border: 5px dashed black;
+  box-sizing: border-box;
+  float: left;
+  height: 300px;
+  padding: 50px;
+  width: 50%;
+}
+
+.compinche:last-child {
+  background: yellow;
+  border-left: none;
+}
+
+.test-inline {
+  background: peru;
+  border: 2px solid red;
+  display: inline-block;
+  font-weight: bold;
+  margin: 100px 0 100px 50px;
+  padding: 20px;
+}
+
+img {
+  margin: 200px;
+}
+
+.main-nav {
+  background: purple;
+}
+
+.main-nav ul {
+  text-align: center;
+}
+
+.main-nav li {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+
+.main-nav a {
+  background: red;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.viewport {
+  border: 2px dashed gray;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background: orange;
+  height: 100px;
+  min-height: 100px;
+}
+
+.content {
+  background: purple;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.sidebar {
+  background: greenyellow;
+  width: 100px;
+  transition: 0.5s;
+}
+
+.main {
+  background: gray;
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    height: 100px;
+    min-height: 100px;
+    width: auto;
+    background: green;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
