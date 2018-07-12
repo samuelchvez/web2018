@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.semaforo {
+  background: black;
+  padding: 4rem;
+  width: 10rem;
+}
+
+.light {
+  border-radius: 5rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+  opacity: 0.2;
+  width: 10rem;
+}
+
+.light.on {
+  opacity: 1.0;
+}
+
+.light:last-child {
+  margin-bottom: 0;
+}
+
+.light.red { background: red; }
+.light.yellow { background: yellow; }
+.light.green { background: green; }
+
+.nextBtn {
+  font-size: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  width: 18rem;
+}

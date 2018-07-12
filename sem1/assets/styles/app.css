@@ -45,7 +45,7 @@ h1.big {
   border: 2px dashed gray;
   height: 300px;
   position: relative; /* importante */
-  width: 300px;
+  width: 10rem;
 }
 
 .particula {
@@ -63,3 +63,16 @@ h1.big {
   left: 80px;
   top: 70px;
 }
+
+.flex-container {
+  background: green;
+  display: flex;
+  height: 20rem;
+}
+
+.flex-square {
+  background: red;
+  height: 7rem;
+  width: 7rem;
+}
+
