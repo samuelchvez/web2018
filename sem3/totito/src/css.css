@@ -1,0 +1,25 @@
+.root {
+
+}
+
+button {
+	background-color: white;
+	border: 2px solid black;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 40px;
+	height: 100px;
+	line-height: 98px;
+	text-align: center;
+	width: 100px;
+}
+
+button:hover {
+	background: #65D828;
+}
+
+body {
+	padding-left: 480px;
+	padding-top: 90px;
+}
+
