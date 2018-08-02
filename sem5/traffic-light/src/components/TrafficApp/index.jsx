@@ -38,6 +38,18 @@ class TrafficApp extends React.Component {
     });
   }
 
+  _startRotating() {
+    const timer = setInterval(this._changeLight.bind(this), 500);
+    this.setState({
+      timer,
+    });
+  }
+
+  _stopRotating() {
+    const { timer } = this.state;
+    clearInterval(timer);
+  }
+
   render() {
     const { colors, currentLight } = this.state;
     return (
@@ -48,6 +60,9 @@ class TrafficApp extends React.Component {
         />
         <button onClick={this._changeLight.bind(this)}>Cambiar!</button>
         <button onClick={this._addRandomColor.bind(this)}>Agregar!</button>
+        <br/>
+        <button onClick={this._startRotating.bind(this)}>Empezar!</button>
+        <button onClick={this._stopRotating.bind(this)}>Parar!</button>
       </Fragment>
     );
   }
@@ -55,3 +70,14 @@ class TrafficApp extends React.Component {
 
 
 export default TrafficApp;
+
+// let currentInterval = 0;
+
+// for(let i = 0; i < 10; i++) {
+//   const startTimeout = (
+//     lInterval => setTimeout(() => {
+//       // Encender la luz
+//       currentInterval = lInterval;
+//     }, timeout)
+//   )(i);
+// }
