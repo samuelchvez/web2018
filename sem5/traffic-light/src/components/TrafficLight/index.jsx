@@ -14,6 +14,7 @@ const TrafficLight = ({
       colors.map(
         color => (
           <Light
+            key={color}
             color={color}
             size={size}
             isTurnedOn={color === turnedOnLight}

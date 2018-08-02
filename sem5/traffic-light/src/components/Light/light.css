@@ -1,10 +1,12 @@
 .light {
   border-radius: 50%;
   opacity: 0.4;
+  transition: 0.5s;
 }
 
 .light.on {
   opacity: 1.0;
+  transform: scale(1.05);
 }
 
 .light.small {
