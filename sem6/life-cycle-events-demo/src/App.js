@@ -1,44 +1,24 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 
+import { fetchItems } from './utils';
 import LifeCycleEventDemo from './LifeCycleEventDemo';
-import { getRandomText } from './utils';
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isShowing: false,
-      currentText: 'frase X',
+      items: [],
     };
   }
 
+  componentWillMount() {
+    fetchItems().then(items => this.setState({ items }));
+  }
+
   render() {
-    const {
-      isShowing,
-      currentText,
-    } = this.state;
-    return (
-      <Fragment>
-        { isShowing && <LifeCycleEventDemo text={currentText} /> }
-        <button
-          type="button"
-          onClick={() => this.setState({
-            isShowing: !isShowing,
-          })}
-        >
-          {'Toggle!'}
-        </button>
-        <button
-          type="button"
-          onClick={() => this.setState({
-            currentText: getRandomText(),
-          })}
-        >
-          {'Change text!'}
-        </button>
-      </Fragment>
-    );
+    const { items } = this.state;
+    return <LifeCycleEventDemo items={items} />;
   }
 }
 

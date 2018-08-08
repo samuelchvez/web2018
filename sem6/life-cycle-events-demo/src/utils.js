@@ -1,4 +1,4 @@
-export const fetchSomething = () => fetch(
+export const fetchItems = () => fetch(
   'https://raw.githubusercontent.com/samuelchvez/todos-fake-json-api/master/db.json',
 ).then(
   resultado => resultado.json(),
