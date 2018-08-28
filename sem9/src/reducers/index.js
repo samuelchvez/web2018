@@ -7,3 +7,5 @@ const reducer = combineReducers({
   inventory,
   cart,
 });
+
+export default reducer;

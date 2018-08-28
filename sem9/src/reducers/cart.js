@@ -42,7 +42,7 @@ const order = (state = [], action) => {
 
 const cart = combineReducers({
   byId,
-  order;
+  order,
 });
 
 export default cart;

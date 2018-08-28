@@ -3,7 +3,20 @@ import { combineReducers } from 'redux';
 import * as types from '../types';
 
 
-const byId = (state = {}, action) => {
+const byId = (state = {
+  '2': {
+    id: '2',
+    name: 'apple',
+    price: 5,
+    qty: 10,
+  },
+  '1': {
+    id: '1',
+    name: 'banana',
+    price: 2,
+    qty: 100,
+  },
+}, action) => {
   switch (action.type) {
     case types.INVENTORY_ADDED: {
       const { id } = action.payload;
@@ -33,7 +46,7 @@ const byId = (state = {}, action) => {
   }
 };
 
-const order = (state = [], action) => {
+const order = (state = ['1', '2'], action) => {
   switch (action.type) {
     case types.INVENTORY_ADDED: {
       const { id } = action.payload;
@@ -49,7 +62,7 @@ const order = (state = [], action) => {
 
 const inventory = combineReducers({
   byId,
-  order;
+  order,
 });
 
 export default inventory;
