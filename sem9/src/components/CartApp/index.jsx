@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 
-import InventoryList from '../InventoryList';
+import Inventory from '../Inventory';
 import CartTotal from '../CartTotal';
 
 
 const CartApp = () => (
   <Fragment>
-    <InventoryList />
+    <Inventory />
     <CartTotal />
   </Fragment>
 );

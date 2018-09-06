@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 
+import * as selectors from '../../reducers';
 import InventoryItem from '../InventoryItem';
 
 
@@ -9,7 +10,9 @@ const InventoryList = ({ products = [] }) => (
     <h1>{'Inventario:'}</h1>
     <ul>
       {
-        products.map(({ id }) => <InventoryItem id={id} />)
+        products.length > 0
+          ? products.map(({ id }) => <InventoryItem key={id} id={id} />)
+          : <li>No hay productos!</li>
       }
     </ul>
   </Fragment>
@@ -17,7 +20,7 @@ const InventoryList = ({ products = [] }) => (
 
 export default connect(
   state => ({
-    products: state.inventory.order.map(id => state.inventory.byId[id]),
+    products: selectors.getProducts(state),
   }),
   undefined,
 )(InventoryList);

@@ -46,3 +46,18 @@ const cart = combineReducers({
 });
 
 export default cart;
+
+export const getProductQuantity = (state, id) => state.byId[id] || 0;
+export const getProductIdsInCart = (state) => state.order;
+export const getProductQtysInCart = (state) => getProductIdsInCart(state).map(id => getProductQuantity(state, id));
+
+/*
+
+LOS SELECTORES LOCALES
+
+state = {
+  byId: {},
+  order: []
+}
+
+*/
