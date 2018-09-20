@@ -1,16 +1,18 @@
 import {
-  // call,
+  call,
   takeEvery,
-  // put,
+  put,
 } from 'redux-saga/effects';
 
-import { createUser } from '../api/users';
+import { saveUser } from '../api/users';
 import * as types from '../types/users';
+import * as actions from '../actions/users';
 
 
 function* addUserGenerator(action) {
   const {
     payload: {
+      id,
       firstName,
       lastName,
       username,
@@ -18,12 +20,15 @@ function* addUserGenerator(action) {
     }
   } = action;
 
-  console.log("ESTO ESTA SUCEDIENDO!!!", firstName, lastName, username, email);
+  const returnedUser = yield call(
+    saveUser,
+    firstName,
+    lastName,
+    username,
+    email,
+  );
 
-  // yield call(
-  //   [Clients, 'remove'],
-  //   { token, id: payload, mock },
-  // );
+  yield put(actions.confirmUser(id));
 }
 
 

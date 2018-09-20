@@ -15,3 +15,8 @@ export const removeUser = id => ({
   type: types.USER_REMOVED,
   payload: { id },
 });
+
+export const confirmUser = id => ({
+  type: types.USER_CONFIRMED,
+  payload: { id },
+});

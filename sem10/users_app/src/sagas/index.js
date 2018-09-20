@@ -3,7 +3,7 @@ import { fork, all } from 'redux-saga/effects';
 import { watchUserCreation } from './users';
 
 
-function* mainSaga(): Iterator<any> {
+function* mainSaga() {
   yield all([
     fork(watchUserCreation),
   ]);

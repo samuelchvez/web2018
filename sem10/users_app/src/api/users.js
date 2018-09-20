@@ -15,6 +15,6 @@ export const saveUser = (
       username,
       email,
     }),
-    1000,
+    Math.floor(Math.random() * 10000),
   ),
 );
