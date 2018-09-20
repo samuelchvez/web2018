@@ -1,13 +1,25 @@
-import { createStore } from 'redux';
+import {
+  createStore,
+  applyMiddleware, // nuevo
+} from 'redux';
+import createSagaMiddleware from 'redux-saga'; // nuevo
 
 import reducer from './reducers';
+import mainSaga from './sagas'; // nuevo
 
+
+const sagaMiddleware = createSagaMiddleware();
 
 const configureStore = () => {
-  return createStore(
+  const middlewares = [sagaMiddleware]; // nuevo
+  const store = createStore(
     reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(...middlewares), // nuevo
   );
+
+  sagaMiddleware.run(mainSaga); // nuevo
+
+  return store;
 };
 
 export default configureStore;

@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "email-validator": "^2.0.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
+    "redux-saga": "^0.16.0",
     "uuid-v4": "^0.1.0"
   },
   "scripts": {
