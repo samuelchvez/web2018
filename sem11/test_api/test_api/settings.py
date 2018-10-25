@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'canoneras',
+    'staff',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,7 @@ REST_FRAMEWORK = {
         # 'rest_framework.authentication.BasicAuthentication',
     ),
 }
+
+# /api/v1/canoneras/?borrowed_by=34
+# /api/v1/users/34/canoneras/
+

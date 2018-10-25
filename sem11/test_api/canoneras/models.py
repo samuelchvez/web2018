@@ -1,3 +1,5 @@
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -5,7 +7,11 @@ from django.contrib.auth.models import User
 class Canonera(models.Model):
     brand = models.CharField(max_length=100)
     name = models.CharField(max_length=5)
-    borrowed_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+
+    # Generic fields
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, null=True)
+    object_id = models.PositiveIntegerField(null=True)
+    borrowed_by = GenericForeignKey('content_type', 'object_id')
 
 '''
 Mini clase de REST:
